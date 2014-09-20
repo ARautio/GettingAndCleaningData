@@ -61,37 +61,25 @@ names(subject) <- "Subject"
 X$Subject <- as.factor(unlist(subject))
 
 # 3. Uses descriptive activity names to name the activities in the data set ---------------
-names(Y) <- "ID"
-names(activity_labels) <- c("ID","Activity")
-activity <- merge(Y,activity_labels,by="ID")
-X$Activity <- as.factor(unlist(activity$Activity))
+# Because activity_labels happen to match their order we can change the levels easily.
+levels(Y) <- as.factor(unlist(activity_labels[2]))
+X$Activity <- as.factor(unlist(Y))
 
 # 4. Appropriately labels the data set with descriptive variable names.   ---------------
-names(X) <- gsub("tBody","Time.Domain.Body",names(X))
-names(X) <- gsub("tGravity","Time.Domain.Gravity",names(X))
-names(X) <- gsub("fBody","Frequency.Domain.Body",names(X))
-names(X) <- gsub("fGravity","Frequency.Domain.Gravity",names(X))
-names(X) <- gsub("Acc",".Acceleration",names(X))
-names(X) <- gsub("Gyro",".Gyroscope",names(X))
-names(X) <- gsub("Jerk",".Jerk",names(X))
-names(X) <- gsub("Mag",".Magnitude",names(X))
-names(X) <- gsub("-mean\\(\\)",".Mean",names(X))
-names(X) <- gsub("-std\\(\\)",".Standard.Deviation",names(X))
-names(X) <- gsub("-",".",names(X))
+colnames(X) <- gsub("tBody","Time.Domain.Body",names(X))
+colnames(X) <- gsub("tGravity","Time.Domain.Gravity",names(X))
+colnames(X) <- gsub("fBody","Frequency.Domain.Body",names(X))
+colnames(X) <- gsub("fGravity","Frequency.Domain.Gravity",names(X))
+colnames(X) <- gsub("Acc",".Acceleration",names(X))
+colnames(X) <- gsub("Gyro",".Gyroscope",names(X))
+colnames(X) <- gsub("Jerk",".Jerk",names(X))
+colnames(X) <- gsub("Mag",".Magnitude",names(X))
+colnames(X) <- gsub("-mean\\(\\)",".Mean",names(X))
+colnames(X) <- gsub("-std\\(\\)",".Standard.Deviation",names(X))
+colnames(X) <- gsub("-",".",names(X))
 
 # 5. Create data set with the avg of each var for each activity and each subject. -----
-is.installed <- function(mypkg){
-  is.element(mypkg, installed.packages()[,1])
-}
-if(!is.installed("dplyr"))
-{
-  install.packages("dplyr")
-}
-require("dplyr")
+X_tidy <- aggregate(X, by=list(Activity = X$Activity, Subject=X$Subject), mean)
+X_tidy <- X_tidy[,1:68]
 
-X_tbl <- tbl_df(X)
-grouped <- group_by(X,Activity,Subject)
-X_tidy <-summarise_each(grouped,funs(mean))
-
-# Write to table
 write.table(X_tidy,file="output.txt",row.name=FALSE)
