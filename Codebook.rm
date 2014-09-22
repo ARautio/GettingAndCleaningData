@@ -1,0 +1,54 @@
+This data contains follwing variables:
+
+Subject - A number that indicates the person number
+Activity - Text which indicates what has the activity been when getting these values
+
+Besides these variables the data set contains mean values from following variables:
+
+Time.Domain.Body.Gyroscope.Mean.Y
+Time.Domain.Body.Gyroscope.Mean.Z
+Time.Domain.Body.Gyroscope.Standard.Deviation.X
+Time.Domain.Body.Gyroscope.Standard.Deviation.Y
+Time.Domain.Body.Gyroscope.Standard.Deviation.Z
+Time.Domain.Body.Gyroscope.Jerk.Mean.X
+Time.Domain.Body.Gyroscope.Jerk.Mean.Y
+Time.Domain.Body.Gyroscope.Jerk.Mean.Z
+Time.Domain.Body.Gyroscope.Jerk.Standard.Deviation.X
+Time.Domain.Body.Gyroscope.Jerk.Standard.Deviation.Y
+Time.Domain.Body.Gyroscope.Jerk.Standard.Deviation.Z
+Time.Domain.Body.Acceleration.Magnitude.Mean
+Time.Domain.Body.Acceleration.Magnitude.Standard.Deviation
+Time.Domain.Gravity.Acceleration.Magnitude.Mean
+Time.Domain.Gravity.Acceleration.Magnitude.Standard.Deviation
+Time.Domain.Body.Acceleration.Jerk.Magnitude.Mean
+Time.Domain.Body.Acceleration.Jerk.Magnitude.Standard.Deviation
+Time.Domain.Body.Gyroscope.Magnitude.Mean
+Time.Domain.Body.Gyroscope.Magnitude.Standard.Deviation
+Time.Domain.Body.Gyroscope.Jerk.Magnitude.Mean
+Time.Domain.Body.Gyroscope.Jerk.Magnitude.Standard.Deviation
+Frequency.Domain.Body.Acceleration.Mean.X
+Frequency.Domain.Body.Acceleration.Mean.Y
+Frequency.Domain.Body.Acceleration.Mean.Z
+Frequency.Domain.Body.Acceleration.Standard.Deviation.X
+Frequency.Domain.Body.Acceleration.Standard.Deviation.Y
+Frequency.Domain.Body.Acceleration.Standard.Deviation.Z
+Frequency.Domain.Body.Acceleration.Jerk.Mean.X
+Frequency.Domain.Body.Acceleration.Jerk.Mean.Y
+Frequency.Domain.Body.Acceleration.Jerk.Mean.Z
+Frequency.Domain.Body.Acceleration.Jerk.Standard.Deviation.X
+Frequency.Domain.Body.Acceleration.Jerk.Standard.Deviation.Y
+Frequency.Domain.Body.Acceleration.Jerk.Standard.Deviation.Z
+Frequency.Domain.Body.Gyroscope.Mean.X
+Frequency.Domain.Body.Gyroscope.Mean.Y
+Frequency.Domain.Body.Gyroscope.Mean.Z
+Frequency.Domain.Body.Gyroscope.Standard.Deviation.X
+Frequency.Domain.Body.Gyroscope.Standard.Deviation.Y
+Frequency.Domain.Body.Gyroscope.Standard.Deviation.Z
+Frequency.Domain.Body.Acceleration.Magnitude.Mean
+Frequency.Domain.Body.Acceleration.Magnitude.Standard.Deviation
+Frequency.Domain.BodyBody.Acceleration.Jerk.Magnitude.Mean
+Frequency.Domain.BodyBody.Acceleration.Jerk.Magnitude.Standard.Deviation
+Frequency.Domain.BodyBody.Gyroscope.Magnitude.Mean
+Frequency.Domain.BodyBody.Gyroscope.Magnitude.Standard.Deviation
+Frequency.Domain.BodyBody.Gyroscope.Jerk.Magnitude.Mean
+Frequency.Domain.BodyBody.Gyroscope.Jerk.Magnitude.Standard.Deviation
